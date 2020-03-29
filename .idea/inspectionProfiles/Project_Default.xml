@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="py09_网络爬虫.imooc_lagou.handle_crawl_lagou.imooc_lagou" />
+          <option value="py09_网络爬虫.imooc_lagou.handle_insert_data.imooc_lagou" />
+          <option value="py09_网络爬虫.imooc_lagou.handle_insert_data.create_lagou_tables" />
+          <option value="py09_网络爬虫.imooc_lagou.handle_crawl_lagou.create_lagou_tables" />
+          <option value="py09_网络爬虫.imooc_lagou.handle_crawl_lagou.handle_insert_data" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -137,7 +137,7 @@ def handle_photo():
             list_info[-1]['arr']['type'].append('image')
     list_info.reverse()  # 翻转
     final_dict = {"list": list_info}
-    with open("../lawlite19.github.io/source/photos/data.json", "w") as fp:
+    with open("E:\myblog\source\photos", "w") as fp:
         json.dump(final_dict, fp)
 
 

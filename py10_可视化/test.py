@@ -1,11 +1,15 @@
-from pyecharts import Line
+from pyecharts import WordCloud
+import pandas as pd
 
-data_x = ['1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007',
-          '2008', '2009']
-data_y = [0.32, 0.32, 0.32, 0.32, 0.33, 0.33, 0.34, 0.37, 0.37, 0.37, 0.37, 0.39, 0.41, 0.42, 0.44]
+post_data = pd.read_csv('C:\data\post_data.csv')
 
-line = Line("Demo阶梯图")
-line.add(name="Price", x_axis=data_x, y_axis=data_y, is_stop=True, is_lable_show=True,
-         yaxis_min=0.3, axis_max=0.45, legend_test_color="red"
-         )
-line.render("demo.html")
+post_data2 = post_data.groupby(by=['category']).agg({'views': sum}).reset_index()
+print(post_data2)
+
+wordcloud = WordCloud(width=1300, height=620)
+wordcloud.add("",
+              post_data2['category'],
+              post_data2['views'],
+              word_size_range=[20, 100]
+              )
+wordcloud.render("wordcloud.html")
